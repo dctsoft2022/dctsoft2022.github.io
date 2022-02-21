@@ -48,7 +48,7 @@ try-catch문을 빠져나가고 예외는 처리되지만, 검사결과가 true�
 ```java
 try{
   Exception e = new Exception("고의로 발생시켰음.");
-  throw e;
+  throw e; //고의로 발생시킴
 } catch (Exception e){
   System.out.println("에러 메시지 : "+ e.getMessage());
   e.printStackTrace();
