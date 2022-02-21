@@ -45,4 +45,17 @@ try-catch문을 빠져나가고 예외는 처리되지만, 검사결과가 true�
 - printStackTrace() : 예외발생 당시의 호출스택(Call Stack)에 있었던 메서드의 정보와 예외 메시지를 화면에 출력한다.
 - getMessage() : 발생한 예외클래스의 인스턴스에 저장된 메시지를 얻을 수 있다.  
 
+```java
+try{
+  Exception e = new Exception("고의로 발생시켰음.");
+  throw e;
+} catch (Exception e){
+  System.out.println("에러 메시지 : "+ e.getMessage());
+  e.printStackTrace();
+}
+System.out.println("프로그램이 정상 종료 되었습니다.");
+```  
+Exception 인스턴스를 생성할 때, 생성자에 String을 넣어 주면,  
+이 String이 Exception 인스턴스에 메시지로 저장된다.  
+이 메시지는 getMessage()를 이용해서 얻을 수 있다. 
 
